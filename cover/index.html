@@ -31,21 +31,39 @@
 </head>
 
 <body class="text-center">
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  
+ <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
         <nav class="nav justify-content-center">
-          <img src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" style="height: 15rem;"
+          <img id ="image-one" src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" style="height: 15rem;"
             class="card-img-top img-fluid" alt="Quiz Time giphy">
+          <img id="image-two" src="https://i1.wp.com/teaser-trailer.com/wp-content/uploads/Final-Score-1.jpg?ssl=1" style="height: 15rem;"
+            class="card-img-top img-fluid hide" alt="Final Score Image">
+          
         </nav>
       </div>
+    <row>
+      <br>
+    <h4 id="timer" class="hide"></h4>
     </header>
 
-    <p style="text-align: center;">Please select the correct answer. Each answer is worth 1 point.
+    <p id="begin-text"  style="text-align: center;">Please select the correct answer. Each answer is worth 1 point.
       Wrong answer will get you 0 point for that question. You have 1 min. to answer 5 questions. <br> Best of luck!</p>
 
     <main role="main" class="inner cover">
-      <div class="card text-center bg-secondary border-danger">
+
+      <p id ="box"></p>
+      <div id="show-highscore"></div>
+      <br>
+      <div id="input-box" class="input-group mb-3 hide">
+        <input id="input" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button id="submit-button" class="btn btn-outline-secondary" type="button">Submit</button>
+        </div>
+      </div>
+
+      <div id="quiz-card"  class="card text-center bg-secondary border-danger">
         <div class="card-body">
 
           <div id="questions-container" class="hide">
@@ -53,19 +71,14 @@
               <div id="questions" style="text-align: left;">Questions</div>
             </h5>
             <hr>
-            <div id="btnAnswers" class="btn-grid">
-              
-                <button class="btn btn-outline-primary text-white focus" data-number="1">Answer1</button>
-                <button class="btn btn-outline-primary text-white focus" data-number="2">Answer2</button>
-                <button class="btn btn-outline-primary text-white focus" data-number="3">Answer3</button>
-                <button class="btn btn-outline-primary text-white focus" data-number="4">Answer4</button>
-              
+            <div id="button-answers" class="btn-grid">
+
             </div>
           </div>
 
           <div class="lead btnControls">
-            <button id="begin-Quiz" class="btn btn-lg btn-primary">Begin Code Quiz</button> 
-            <button id="next-Question" class="btn btn-lg btn-primary hide">Next Question</button>
+            <button id="begin-quiz" class="btn btn-lg btn-primary">Begin Code Quiz</button> 
+            <button id="next-question" class="btn btn-lg btn-primary hide">Next Question</button>
           </div>
         </div>
       </div>
